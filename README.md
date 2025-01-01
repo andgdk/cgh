@@ -37,11 +37,3 @@
 ## Examples
 
 TODO: Include examples of how to use the project here.
-
-## TODO
-
--   Consider creating Jupyter notebook using the Scilab kernel to provide examples
--   Explain manufacturing constraints (binary DOE element)
--   Add user option to compute CGH with 8-step quantized sampling/continuous phase in addition to binary phase
--   Design further abort criteria for iteration
--   Investigate how signatures of functions can be improved
