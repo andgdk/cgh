@@ -1,6 +1,6 @@
-// index.sci
+// index.sce
 //
-// Copyright 2024 Andreas Gödecke
+// Copyright 2025 Andreas Gödecke
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,7 +15,7 @@
 // limitations under the License.
 
 
-workingDir = getenv('cgh-01-dir', pwd()); // Optionally, set the working directory
+workingDir = getenv('cgh-01-dir', pwd());  // Optionally, set the working directory
                                            // prior to execution via console
                                            // setenv('cgh-01-dir', 'SOMEPATH')
 cd(workingDir);
@@ -24,17 +24,15 @@ cd(workingDir);
 clc;
 clear;
 
-// Display a welcome message
 mprintf("Generate and reconstruct CGHs with Scilab!\n\n");
 
 // Add the source directory to the path
 getd("src");
 
-// Example: Load an image and display it
-signalImageName = "signal-256-oss.bmp";
+// Example: Generate a CGH and reconstruct the signal
+signalImageName = "signal-256-ifta.bmp";
 signalImg = './data/' + signalImageName;
 if isfile(signalImg) then
-    // Call a function from the src directory (example function)
     try
         ifta(signalImg, 20, 1000, 5E-3, 5E-3, 632.8E-6);
         mprintf("Saved phase mask in `results/`.\n");

@@ -1,5 +1,5 @@
 run:
-	scilab -f index.sci
+	scilab -f index.sce
 
 genlib:
 	cd src/utils && scilab -e "genlib('cgh_utils')"

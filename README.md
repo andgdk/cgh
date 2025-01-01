@@ -24,12 +24,12 @@
 2. Navigate to the project directory.
 3. Run the main script:
     ```scilab
-    exec('index.sci');
+    exec('index.sce');
     ```
 
 ## Project Structure
 
--   `index.sci`: Main script file.
+-   `index.sce`: Main script file.
 -   `src/`: Source code directory.
 -   `data/`: Data files directory with examples.
 -   `results/`: Directory for output results.

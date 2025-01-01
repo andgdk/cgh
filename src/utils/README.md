@@ -1,4 +1,3 @@
-````scilab
-    genlib('cgh_utils')
-    ```
-````
+```scilab
+genlib('cgh_utils')
+```
