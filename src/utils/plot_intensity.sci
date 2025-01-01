@@ -12,9 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-function plot_intensity(fig, g, x, y) // BUG: Signal is always rescaled, not ideal!
-    scf(fig);
-    set(gca(), "auto_clear", "on");
+function plot_intensity(g, x, y) // BUG: Signal is always rescaled, not ideal!
+    //set(gca(), "auto_clear", "on");
     gabs = abs(g);
     G = gabs.*gabs;
     // grayplot(y, x, 255/max(G)*G);
@@ -22,7 +21,6 @@ function plot_intensity(fig, g, x, y) // BUG: Signal is always rescaled, not ide
     Glogmin = min(Glog);
     Glogmax = max(Glog);
     grayplot(y, x, 255/(Glogmax-Glogmin)*(Glog-Glogmin));
-    fig.color_map = gray(256);
     ca = gca();
     ca.isoview = "on";
 endfunction

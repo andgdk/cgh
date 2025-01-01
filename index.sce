@@ -30,7 +30,7 @@ mprintf("Generate and reconstruct CGHs with Scilab!\n\n");
 getd("src");
 
 // Example: Generate a CGH and reconstruct the signal
-signalImageName = "signal-256-ifta.bmp";
+signalImageName = "signal-256-oss.bmp";
 signalImg = './data/' + signalImageName;
 if isfile(signalImg) then
     try

@@ -72,12 +72,19 @@ function ifta(imagePath, iterations, z, dx, dy, lambda)
     g = gabs.*exp(%i*garg);
 
     // Plots
-    gcm256 = gray(256);
-
-    fig_G    = scf(1);
-    fig_garg = scf(2);
-    fig_F    = scf(3);
-    fig_farg = scf(4);
+    
+    fig = scf(1);
+    fig.color_map = gray(256);
+    clf;
+    
+    subplot(2,2,1);
+    title("Intensity in signal plane");
+    subplot(2,2,2);
+    title("Phase in signal plane");
+    subplot(2,2,3);
+    title("Intensity in DOE plane");
+    subplot(2,2,4);
+    title("Phase in DOE plane");
 
     for i = 1:iterations
         tic();
@@ -85,8 +92,10 @@ function ifta(imagePath, iterations, z, dx, dy, lambda)
         f = hologram_from_signal(g, V, W);
         phase = f;
 
-        plot_intensity(fig_F, f, x, y);
-        plot_phase(fig_farg, f, x, y);
+        subplot(2,2,3);
+        plot_intensity(f, x, y);
+        subplot(2,2,4);
+        plot_phase(f, x, y);
         
         // Constraints in the DOE plane
         f = set_amplitude(f, ones(f));
@@ -95,8 +104,10 @@ function ifta(imagePath, iterations, z, dx, dy, lambda)
         g = signal_from_hologram(f, V, W);
 
         // Plot signal
-        plot_intensity(fig_G, g, lambda*z*fx, lambda*z*fy);
-        plot_phase(fig_garg, g, lambda*z*fx, lambda*z*fy);
+        subplot(2,2,1);
+        plot_intensity(g, lambda*z*fx, lambda*z*fy);
+        subplot(2,2,2);
+        plot_phase(g, lambda*z*fx, lambda*z*fy);
 
         // Constraints in the signal plane
         g = set_amplitude(g, g0);
@@ -107,5 +118,4 @@ function ifta(imagePath, iterations, z, dx, dy, lambda)
     phasearg = atan(imag(phase), real(phase));
         
     imwrite(imnorm(255/(2*%pi)*(%pi+phasearg)), 'results/mask-n2fq-pi-256.bmp', 100);
-    //xs2png(fig_F, 'test.bmp');
 endfunction

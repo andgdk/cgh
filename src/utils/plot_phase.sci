@@ -12,12 +12,10 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-function plot_phase(fig, g, x, y)
-    scf(fig);
-    set(gca(), "auto_clear", "on");
+function plot_phase(g, x, y)
+    //set(gca(), "auto_clear", "on");
     garg = atan(imag(g), real(g));
     grayplot(y, x, 255/(2*%pi)*(%pi+garg))
-    fig.color_map = gray(256);
     ca = gca();
     ca.isoview = "on";
 endfunction

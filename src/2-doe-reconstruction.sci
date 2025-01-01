@@ -255,7 +255,7 @@ function reconstruct_hologram(f, p, lambda)
     //e=gce();
     //e.cdata_mapping='direct' // default is 'scaled' relative to the colormap
     //e.color_flag=3; // interpolated shading mode. The default is 4 ('flat' mode) for surf
-    fig = scf(5);
+    fig = scf(2);
     Sgrayplot(x, y, log(A));
     //Sgrayplot(xi, eta, log(A));
 

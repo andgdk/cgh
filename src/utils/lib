@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <scilablib name="cgh_utils">
   <macro name="hologram_from_signal" file="hologram_from_signal.bin" md5="05c35d642461c29d196eaa9a775ba5a3"/>
-  <macro name="plot_intensity" file="plot_intensity.bin" md5="08818d1a363483f514dfb71f295ea573"/>
-  <macro name="plot_phase" file="plot_phase.bin" md5="1bc0fbc1451fdd579c53cad231afbf1e"/>
+  <macro name="plot_intensity" file="plot_intensity.bin" md5="84c70bb07b3f3e05f4a08ec8baabcb0c"/>
+  <macro name="plot_phase" file="plot_phase.bin" md5="8f6bb711d8ea3b0fa230d17ae45609ed"/>
   <macro name="set_amplitude" file="set_amplitude.bin" md5="27c503bb03133ae571b6f41ddef75e22"/>
   <macro name="signal_from_hologram" file="signal_from_hologram.bin" md5="868177427f2e427a8b6f0d593093174c"/>
 </scilablib>
