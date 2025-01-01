@@ -1,4 +1,11 @@
-# Computer Generated Hologram Generation with Scilab
+# Computer Generated Hologram Generation with Scilab (CGH)
+
+## Generate CGH and Signal Reconstructions
+
+Generate binary phase masks from black and white images and compute a
+reconstruction from the phase mask into the signal plane.
+
+<img alt="Resulting computation of the OSS example" src="assets/plot-example.png" width="700px" />
 
 ## Requirements
 
@@ -26,6 +33,9 @@
     ```scilab
     exec('index.sce');
     ```
+4. Observe the resulting graphs.
+5. Add your own black and white signal images.
+6. Update the signal image name variable in `index.sce` and execute the program.
 
 ## Project Structure
 
