@@ -1,0 +1,53 @@
+name: Bug report
+description: Create a report to help us improve
+
+body:
+    - type: dropdown
+      id: is-regression
+      attributes:
+          label: Is this a regression?
+          options:
+              - "Yes"
+              - "No"
+      validations:
+          required: true
+
+    - type: textarea
+      id: description
+      attributes:
+          label: Description
+      validations:
+          required: true
+
+    - type: textarea
+      id: reproduction
+      attributes:
+          label: Please provide a minimal reproduction of the bug
+          placeholder: |
+              Steps to reproduce the behavior:
+              1. Refer to paper '...'
+              2. Conclude '...'
+              Or
+              1. Set variable '...'
+              2. Execute '....'
+              3. See error
+
+    - type: textarea
+      id: exception-or-error
+      attributes:
+          label: Please provide the exception or error you saw
+          render: true
+
+    - type: textarea
+      id: environment
+      attributes:
+          label: Please provide the environment you discovered this bug in
+          render: true
+          placeholder: |
+              OS: [e.g. Windows 11 24H2, Ubuntu 18.04 LTS]
+              Scilab: [e.g. 2025.0.0]
+
+    - type: textarea
+      id: other
+      attributes:
+          label: Anything else?
