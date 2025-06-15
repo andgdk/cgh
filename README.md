@@ -1,3 +1,5 @@
+> This repository is archived
+
 # Computer Generated Hologram Generation with Scilab (CGH)
 
 ## Generate CGH and Signal Reconstructions
